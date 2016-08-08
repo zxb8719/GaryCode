@@ -1,4 +1,4 @@
-package Utils;
+package com.gary.cn.garycode.utils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;

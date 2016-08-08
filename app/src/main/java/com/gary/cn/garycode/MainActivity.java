@@ -4,15 +4,41 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.gary.cn.garycode.utils.UUIDUtil;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gifview_main);
+        setContentView(R.layout.activity_main);
 
+        initView();
+
+    }
+    private void initView()
+    {
+        Button gifview = (Button) findViewById(R.id.btn_gifview);
+        gifview.setOnClickListener(this);
+
+        Button uuid = (Button) findViewById(R.id.btn_uuid);
+        uuid.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.btn_gifview:
+                break;
+            case R.id.btn_uuid:
+                UUIDUtil.getUUID(this);
+                break;
+        }
     }
 
     @Override
@@ -36,4 +62,6 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

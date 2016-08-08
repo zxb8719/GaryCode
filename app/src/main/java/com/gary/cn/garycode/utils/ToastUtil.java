@@ -1,4 +1,4 @@
-package Utils;
+package com.gary.cn.garycode.utils;
 
 import android.content.Context;
 import android.widget.Toast;
